@@ -1,10 +1,10 @@
 import React from 'react'
 import {render, screen} from '@testing-library/react'
-import GithubUsersRepo from "./GithubUsersRepo"
-import GithubUser from "./GithubUser"
+import GithubUsersRepo from "../GithubUsersRepo"
+import GithubUser from "../GithubUser"
 import '@testing-library/jest-dom'
 import {act} from "react-dom/test-utils"
-import Home from "./Home"
+import Home from "../Home"
 
 
 class StubGithubUsersRepo implements GithubUsersRepo {

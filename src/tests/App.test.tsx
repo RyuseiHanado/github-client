@@ -1,5 +1,5 @@
 import {render} from "@testing-library/react"
-import App from "./App"
+import App from "../App"
 import {act} from "react-dom/test-utils"
 
 describe('App', () => {
