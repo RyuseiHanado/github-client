@@ -1,6 +1,6 @@
-import GithubUsersRepo from "./GithubUsersRepo";
-import React, {useEffect, useState} from "react";
-import GithubUser from "./GithubUser";
+import GithubUsersRepo from "./GithubUsersRepo"
+import React, {useEffect, useState} from "react"
+import GithubUser from "./GithubUser"
 
 interface HomeProps {
     githubUsersRepo: GithubUsersRepo
@@ -22,5 +22,4 @@ export default function Home(props: HomeProps) {
             ))}
         </>
     )
-
 }

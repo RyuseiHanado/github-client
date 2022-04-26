@@ -1,39 +1,12 @@
-import React from 'react'
-import {render, screen} from '@testing-library/react'
-import App from './App'
-import GithubUsersRepo from "./GithubUsersRepo"
-import GithubUser from "./GithubUser"
-import '@testing-library/jest-dom'
+import {render} from "@testing-library/react"
+import App from "./App"
 import {act} from "react-dom/test-utils"
 
-
-class StubGithubUsersRepo implements GithubUsersRepo {
-    getUsers_returnValue: Promise<GithubUser[]> = Promise.resolve([])
-
-    getUsers(): Promise<GithubUser[]> {
-        return this.getUsers_returnValue
-    }
-}
-
-describe('home', () => {
-    let stubGithubUsersRepo: StubGithubUsersRepo
-
-    beforeEach(() => {
-        stubGithubUsersRepo = new StubGithubUsersRepo()
-    })
-
-    test('GitHubのユーザー名の一覧が表示される', async () => {
-        stubGithubUsersRepo.getUsers_returnValue = Promise.resolve([
-            {userName: 'userName1'},
-            {userName: 'userName2'},
-        ])
-
+describe('App', () => {
+    test('Homeに必要なpropsを渡してレンダリングしている', async () => {
         // eslint-disable-next-line testing-library/no-unnecessary-act
         await act(async () => {
-            await render(<App githubUsersRepo={stubGithubUsersRepo}/>)
+            await render(<App/>)
         })
-
-        expect(screen.getByText('userName1')).toBeInTheDocument()
-        expect(screen.getByText('userName2')).toBeInTheDocument()
     })
 })
