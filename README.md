@@ -16,5 +16,5 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## 静的型付け言語の解説 
-- [interface](https://www.notion.so/interface-db07f60ce82d4597a37d510291752c94) に関して
+- [interface](https://chief-tarp-123.notion.site/interface-db07f60ce82d4597a37d510291752c94) に関して
 
